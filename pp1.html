@@ -1,0 +1,251 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Coding Club</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="pp1.css">
+</head>
+
+<body>
+
+  <!-- Scroll Progress -->
+  <div id="progress-bar"></div>
+
+  <!-- Floating Particles -->
+  <div class="particles"></div>
+
+  <!-- HEADER -->
+  <header id="header">
+    <div class="logo-section">
+      <img src="data:image/jpeg;base64,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" alt="logo">
+      <h2>Coding Club</h2>
+    </div>
+
+    <nav id="navbar">
+      <ul>
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#events">Events</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#teams">Teams</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#learning">Learning</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="hamburger" id="hamburger">
+      ☰
+    </div>
+  </header>
+
+  <!-- HOME -->
+  <section id="home" class="hero">
+    <div class="hero-left">
+      <h1>WELCOME TO <span>CODING CLUB</span></h1>
+      <p>Build. Learn. Innovate.</p>
+
+      <div class="cta-buttons">
+        <button>Learning Resources</button>
+        <button>Explore Events</button>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMNLByN81pNBOBmU8iY4ZTIr12KI0eWcN1Bw&s" alt="mascot">
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <h2 class="section-title">About Us</h2>
+
+    <div class="glass-card">
+      <p>
+        Coding Club is a student-driven tech community focused on
+        programming, innovation, collaboration, and problem-solving.
+      </p>
+    </div>
+
+    <div class="stats-grid">
+      <div class="stat-card">
+        <h3>500+</h3>
+        <p>Members</p>
+      </div>
+
+      <div class="stat-card">
+        <h3>40+</h3>
+        <p>Events</p>
+      </div>
+
+      <div class="stat-card">
+        <h3>20+</h3>
+        <p>Projects</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- EVENTS -->
+  <section id="events" class="section">
+    <h2 class="section-title">Events</h2>
+
+    <div class="event-tabs">
+      <button class="tab-btn active-tab">Upcoming</button>
+      <button class="tab-btn">Completed</button>
+    </div>
+
+    <select class="event-filter">
+      <option>All</option>
+      <br>
+      <option>Workshops</option>
+      <option>Hackathons</option>
+      <option>Competitions</option>
+      <option>Seminars</option>
+    </select>
+
+    <div class="events-grid">
+
+      <div class="glass-card event-card">
+        <h3>Hackathon 2026</h3>
+        <p>24 hour coding challenge.</p>
+        <button>View Details</button>
+      </div>
+
+      <div class="glass-card event-card">
+        <h3>AI Workshop</h3>
+        <p>Learn modern AI tools.</p>
+        <button>View Details</button>
+      </div>
+
+<!-- Cyberpunk Background -->
+<div class="cyber-bg">
+  <div class="grid"></div>
+  <div class="glow glow1"></div>
+  <div class="glow glow2"></div>
+  <div class="particles"></div>
+</div>
+
+
+
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery" class="section">
+    <h2 class="section-title">Gallery</h2>
+
+    <div class="gallery-grid">
+
+      <div class="gallery-card">
+        <img src="https://img.magnific.com/free-photo/rear-view-programmer-working-all-night-long_1098-18697.jpg?semt=ais_hybrid&w=740&q=80" alt="">
+      </div>
+
+      <div class="gallery-card">
+        <img src="https://c8.alamy.com/comp/RHAR14/software-source-code-layers-of-program-code-on-black-background-RHAR14.jpg" alt="">
+      </div>
+
+    </div>
+  </section>
+
+  <!-- TEAMS -->
+  <section id="teams" class="section">
+    <h2 class="section-title">Teams</h2>
+
+    <div class="team-grid">
+
+      <div class="glass-card member-card">
+        <img src="assets/team/member1.jpg" alt="">
+        <h3>John Doe</h3>
+        <p>Core Team</p>
+
+        <div class="socials">
+          <a href="#">GitHub</a>
+          <a href="#">LinkedIn</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section">
+    <h2 class="section-title">Projects</h2>
+
+    <div class="project-grid">
+
+      <div class="glass-card">
+        <h3>AI Assistant</h3>
+        <p>Smart chatbot project.</p>
+      </div>
+
+      <div class="glass-card">
+        <h3>Cyber Security Tool</h3>
+        <p>Security monitoring dashboard.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- LEARNING -->
+  <section id="learning" class="section">
+    <h2 class="section-title">Learning Resources</h2>
+
+    <div class="learning-grid">
+
+      <div class="glass-card">
+        <h3>Web Development</h3>
+        <p>HTML, CSS, JS roadmap.</p>
+      </div>
+
+      <div class="glass-card">
+        <h3>DSA</h3>
+        <p>Problem solving roadmap.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <h2 class="section-title">Contact Us</h2>
+
+    <div class="contact-container">
+
+      <div class="glass-card">
+        <h3>Socials</h3>
+        <p>Instagram</p>
+        <a href="">Open Google</a>
+        <p>GitHub</p>
+        <p>LinkedIn</p>
+      </div>
+
+
+      <div class="glass-card">
+        <form>
+          <input type="text" placeholder="Your Name">
+          <input type="email" placeholder="Email">
+          <textarea placeholder="Message"></textarea>
+          <button type="submit">Send</button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Coding Club | Made with ❤️ by Coding Club</p>
+  </footer>
+
+  <script src="pp1.js"></script>
+</body>
+</html>
+```
